@@ -1,0 +1,6 @@
+mosquitto_sub -h localhost -t "iot/device_1/data"
+mosquitto_sub -h localhost -t "iot_topic/data"
+
+
+
+docker network inspect iotdevicesimulationandscadaintegrationwithignition_default 
