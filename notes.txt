@@ -3,3 +3,4 @@ mosquitto_sub -h localhost -t "#" -v
 docker network inspect iotdevicesimulationandscadaintegrationwithignition_default 
 docker compose up -d 
 docker compose build 
+ mosquitto_sub -h localhost -t "iot_topic/device_5/data" -v

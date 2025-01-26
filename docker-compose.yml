@@ -6,8 +6,7 @@ services:
       - "1883:1883"
       - "9001:9001"
     restart: always
-    networks:
-      - my_network
+
 
   ignition:
     image: inductiveautomation/ignition:latest
@@ -15,8 +14,7 @@ services:
     ports:
       - "8088:8088"
     restart: always
-    networks:
-      - my_network
+
 
 
   iot-simulator:
@@ -25,9 +23,18 @@ services:
     container_name: iot-simulator
     depends_on:
       - mosquitto
-    networks:
-      - my_network
 
-networks:
-  my_network:
-    driver: bridge
+  postgres_db:
+    image: postgres:15
+    container_name: postgres_db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: admin  
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: pg_database
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      
+volumes:
+  postgres_data:
