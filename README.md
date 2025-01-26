@@ -17,6 +17,8 @@ This project simulates IoT devices using Docker containers, publishes data via M
 
 ![Image Description](./images/ignition_namespace.png)
 
+![alt text](./images/Dashboard_perspective.png)
+
 ## Project Structure
 
 ---
