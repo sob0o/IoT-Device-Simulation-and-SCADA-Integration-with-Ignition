@@ -1,5 +1,6 @@
-mosquitto_sub -h localhost -t "iot/device_1/data"
+mosquitto_sub -h localhost -t "iot_topic/device_1/data
 mosquitto_sub -h localhost -t "iot_topic/data"
+
 
 
 

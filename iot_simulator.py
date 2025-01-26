@@ -8,7 +8,7 @@ BROKER = "mosquitto"  # Service name from docker-compose.yml
 PORT = 1883
 
 # Simulation Parameters
-DEVICE_COUNT = 1
+DEVICE_COUNT = 5
 PUBLISH_INTERVAL = 2  # seconds
 
 # Initialize MQTT Client
@@ -39,7 +39,7 @@ def publish_data():
     while True:
         for device_id in range(1, DEVICE_COUNT + 1):
             data = simulate_device_data(device_id)
-            topic = f"iot_topic/data"
+            topic = f"iot_topic/device_{device_id}/data"
             # Serialize the dictionary as a JSON string
             json_payload = json.dumps(data)
             client.publish(topic, json_payload)
