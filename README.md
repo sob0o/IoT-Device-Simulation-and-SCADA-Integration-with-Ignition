@@ -13,5 +13,8 @@ This project simulates IoT devices using Docker containers, publishes data via M
 - Docker Compose
 - Ignition (for visualization)
 
+![Image Description](./images/imgage.png)
+
+
 ## Project Structure
 
