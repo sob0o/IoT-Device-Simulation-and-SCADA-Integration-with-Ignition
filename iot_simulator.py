@@ -8,7 +8,7 @@ BROKER = "mosquitto"  # Service name from docker-compose.yml
 PORT = 1883
 
 # Simulation Parameters
-DEVICE_COUNT = 5
+DEVICE_COUNT = 1
 PUBLISH_INTERVAL = 4  # seconds
 
 # Initialize MQTT Client
