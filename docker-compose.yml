@@ -35,6 +35,17 @@ services:
       POSTGRES_DB: pg_database
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    ports:
+      - "5050:80"  # Expose pgAdmin on port 5050
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ks_kacemi@esi.dz  # Replace with your email
+      PGADMIN_DEFAULT_PASSWORD: admin  # Replace with a secure password
+    depends_on:
+      - postgres_db 
+
 volumes:
   postgres_data:
