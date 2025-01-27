@@ -44,6 +44,3 @@ This project simulates IoT devices using Docker containers, publishes sensor dat
 
 ![alt text](images/pg_admin_interface.png)
 
-
-
-(ɔ)
