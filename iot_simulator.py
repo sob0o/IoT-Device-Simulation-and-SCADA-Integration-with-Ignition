@@ -9,7 +9,7 @@ PORT = 1883
 
 # Simulation Parameters
 DEVICE_COUNT = 1
-PUBLISH_INTERVAL = 4  # seconds
+PUBLISH_INTERVAL = 2  # seconds
 
 # Initialize MQTT Client
 client = mqtt.Client()
