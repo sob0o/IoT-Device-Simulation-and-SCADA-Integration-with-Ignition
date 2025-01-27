@@ -6,6 +6,7 @@ This project simulates IoT devices using Docker containers, publishes sensor dat
 ![Image Description](./images/architecture.png)
 
 ## Features
+
 - Simulate multiple IoT devices that generate various types of sensor data (e.g., temperature, humidity).
 
 - Each IoT device publishes its sensor data to an MQTT broker (Mosquitto) using the MQTT protocol.
@@ -15,6 +16,8 @@ This project simulates IoT devices using Docker containers, publishes sensor dat
 - Establish a connection between Ignition and PostgreSQL, allowing Ignition to send the real-time data to PostgreSQL for storage.
 
 - Set up pgAdmin to query and manage the data stored in PostgreSQL, providing a user-friendly interface for data management.
+
+- Build a dashboard in Ignition Perspective to visualize the real-time data retrieved from the sensors, 
 
 ## Requirements
 - Docker
