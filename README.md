@@ -29,8 +29,10 @@ This project simulates IoT devices using Docker containers, publishes sensor dat
 ![alt text](images/interface_tags_designer.png)
 
 ## Ignition Dashboard
-![alt text](./images/Dashboard_perspective.png)
 ![alt text](images/pages_02.png) 
+![alt text](./images/Dashboard_perspective.png)
+![alt text](images/iot_dashboard_from_phone.png)
+
 
 ## PostgreSQL Data from pgAdmin
 
