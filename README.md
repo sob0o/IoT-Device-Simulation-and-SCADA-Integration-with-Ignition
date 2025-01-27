@@ -43,3 +43,7 @@ This project simulates IoT devices using Docker containers, publishes sensor dat
 ## PostgreSQL Data from pgAdmin
 
 ![alt text](images/pg_admin_interface.png)
+
+
+
+(ɔ)
