@@ -20,9 +20,9 @@ This project simulates IoT devices using Docker containers, publishes sensor dat
 - Build a dashboard in Ignition Perspective to visualize the real-time data retrieved from the sensors, 
 
 ## Requirements
-- Docker
+- Docker 
 - Mosquitto (MQTT Broker)
-- Ignition
+- Ignition + MQTT Engine Module
 - PostgreSQL
 - pgAdmin
 
