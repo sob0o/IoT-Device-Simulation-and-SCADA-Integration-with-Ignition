@@ -30,6 +30,8 @@ This project simulates IoT devices using Docker containers, publishes sensor dat
 ![alt text](images/mosquito_.png)
 
 
+## Ignition Web Interface (Tags)
+![alt text](images/status_tag.png)
 ## Ignition Designer Interface
 
 ![alt text](images/interface_tags_designer.png)
