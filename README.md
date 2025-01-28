@@ -17,14 +17,14 @@ This project simulates IoT devices using Docker containers, publishes sensor dat
 
 - Set up pgAdmin to query and manage the data stored in PostgreSQL, providing a user-friendly interface for data management.
 
-- Build a dashboard in Ignition Perspective to visualize the real-time data retrieved from the sensors, 
+- Build a dashboard in Ignition Perspective to visualize the real-time data retrieved from the sensors.
 
 ## Requirements
-- Docker 
+- Docker container for simulating iot-device
 - Mosquitto (MQTT Broker)
-- Ignition + MQTT Engine Module
-- PostgreSQL
-- pgAdmin
+- Ignition + MQTT Engine Module (.modl)
+- PostgreSQL (DB server)
+- pgAdmin (DB-Interface )
 
 ## Overview of Mosquitto Terminal
 ![alt text](images/mosquito_.png)
