@@ -50,7 +50,7 @@ def publish_data():
             print(f"Published to {topic}: {json_payload}")
         time.sleep(PUBLISH_INTERVAL)
 
-if __name__ == "__main__":
+if __name__ == "__main__": # this is the main function that will be executed when the script is run 
     connect_mqtt()
     client.loop_start()
     try:
