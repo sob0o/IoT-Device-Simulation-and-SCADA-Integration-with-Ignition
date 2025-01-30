@@ -47,3 +47,8 @@ This project simulates IoT devices using Docker containers, publishes sensor dat
 
 ![alt text](images/pg_admin_interface.png)
 
+
+
+### Note
+
+MQTT is an Application Layer (Layer 7) protocol designed for lightweight IoT communication, running on top of the OSI model. IoT devices connect to the internet via Wi-Fi, Ethernet, or Cellular (Layer 1-2), obtain an IP address (Layer 3), and establish a TCP connection (Layer 4) with an MQTT broker. The broker manages sessions (Layer 5), while devices exchange structured JSON messages (Layer 6) through MQTT’s publish/subscribe model (Layer 7). Unlike direct IP communication, MQTT enables scalable, reliable, and bandwidth-efficient messaging across firewalls and NAT, making it ideal for IoT applications. 
