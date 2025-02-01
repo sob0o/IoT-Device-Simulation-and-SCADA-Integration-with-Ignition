@@ -1,59 +1,106 @@
 # IoT Device Simulation with MQTT, Docker, and Ignition Integration
 
+This project simulates IoT devices using Docker containers, publishes sensor data via an MQTT broker (Mosquitto), and visualizes it in real-time using Ignition. The data is stored in a PostgreSQL database and managed via pgAdmin. It provides a complete framework for simulating, processing, and visualizing IoT sensor data, making it ideal for testing IoT systems and real-time analytics.
 
-This project simulates IoT devices using Docker containers, publishes sensor data via an MQTT broker (Mosquitto), and visualizes it in real-time using Ignition. Data is stored in a PostgreSQL database, with pgAdmin for database management. It provides a complete framework for simulating and processing IoT sensor data. Perfect for testing IoT systems and real-time analytics.
+---
+
+## Table of Contents
+1. [Architecture Overview](#architecture-overview)
+2. [Features](#features)
+3. [Requirements](#requirements)
+4. [Setup and Configuration](#setup-and-configuration)
+5. [Visualization and Monitoring](#visualization-and-monitoring)
+   - [Ignition Web Interface](#ignition-web-interface)
+   - [Ignition Dashboard (Perspective Module)](#ignition-dashboard-perspective-module)
+   - [Ignition Alarms](#ignition-alarms)
+   - [Vision Client Launcher](#vision-client-launcher)
+6. [Database Management](#database-management)
+7. [Technical Notes](#technical-notes)
+
+---
 
 ## Architecture Overview
-![Image Description](./images/Archi_2.png)
+![Architecture Diagram](./images/Archi_2.png)
+
+The system consists of the following components:
+- **IoT Device Simulators**: Docker containers generating sensor data (e.g., temperature, humidity).
+- **MQTT Broker (Mosquitto)**: Handles communication between IoT devices and Ignition.
+- **Ignition**: Subscribes to MQTT topics, processes real-time data, and visualizes it via dashboards.
+- **PostgreSQL**: Stores sensor data for long-term analysis.
+- **pgAdmin**: Provides a user-friendly interface for managing the PostgreSQL database.
+
+---
 
 ## Features
+- **IoT Device Simulation**: Simulate multiple IoT devices generating various types of sensor data (e.g., temperature, humidity).
+- **MQTT Communication**: Devices publish sensor data to an MQTT broker using the MQTT protocol.
+- **Real-Time Data Visualization**: Configure Ignition's MQTT Engine module to subscribe to the broker and retrieve real-time data.
+- **Data Storage**: Ignition sends real-time data to PostgreSQL for persistent storage.
+- **Database Management**: Use pgAdmin to query and manage data stored in PostgreSQL.
+- **Interactive Dashboards**: Build real-time dashboards in Ignition Perspective for data visualization.
+- **Cross-Platform Access**: Access dashboards and alarms via web browsers or mobile devices.
 
-- Simulate multiple IoT devices that generate various types of sensor data (e.g., temperature, humidity).
-
-- Each IoT device publishes its sensor data to an MQTT broker (Mosquitto) using the MQTT protocol.
-
-- Configure the MQTT Engine module in Ignition to subscribe to the MQTT broker and retrieve real-time data from the IoT devices.
-
-- Establish a connection between Ignition and PostgreSQL, allowing Ignition to send the real-time data to PostgreSQL for storage.
-
-- Set up pgAdmin to query and manage the data stored in PostgreSQL, providing a user-friendly interface for data management.
-
-- Build a dashboard in Ignition Perspective to visualize the real-time data retrieved from the sensors.
+---
 
 ## Requirements
-- Docker container for simulating iot-device
-- Mosquitto (MQTT Broker)
-- Ignition + MQTT Engine Module (.modl)
-- PostgreSQL (DB server)
-- pgAdmin (DB-Interface)
+To run this project, you need the following:
+- **Docker**: For containerizing IoT device simulators.
+- **Mosquitto**: MQTT broker for handling device communication.
+- **Ignition**: SCADA platform with the MQTT Engine module (.modl) installed.
+- **PostgreSQL**: Database server for storing sensor data.
+- **pgAdmin**: Web-based interface for managing PostgreSQL databases.
 
-## Overview of Mosquitto Terminal
-![alt text](images/mosquito_.png)
+---
 
+## Setup and Configuration
+1. **IoT Device Simulation**: Use Docker to simulate IoT devices. Each device publishes sensor data to the MQTT broker.
+2. **MQTT Broker**: Set up Mosquitto to handle MQTT communication.
+3. **Ignition Configuration**:
+   - Install the MQTT Engine module.
+   - Configure Ignition to subscribe to MQTT topics and retrieve real-time data.
+   - Connect Ignition to PostgreSQL for data storage.
+4. **Database Setup**: Configure PostgreSQL and pgAdmin for data management.
+5. **Dashboard Creation**: Use Ignition Perspective to build interactive dashboards for real-time data visualization.
 
-## Ignition Web Interface (Tags)
-![alt text](images/status_tag.png)
-## Ignition Designer Interface
+---
 
-![alt text](images/interface_tags_designer.png)
+## Visualization and Monitoring
 
-## Ignition Dashboard (Perspective Module) :  Acces from the web
-![alt text](images/pages_02.png) 
-![alt text](./images/Dashboard_perspective.png)
-### Acces from the phone 
-![alt text](images/iot_dashboard_from_phone.png)
+### Ignition Web Interface
+![Ignition Web Interface](./images/status_tag.png)
 
-### Ignition Alarm (Perspective Module) 
-![alt text](images/ignitiono_alarm_perspective.png)
+### Ignition Designer Interface
+![Ignition Designer Interface](./images/interface_tags_designer.png)
 
-### Vision Client Launcher : Dashboard and Alarm
-![alt text](images/gif_vision_client.gif)
-## PostgreSQL Data from pgAdmin
+### Ignition Dashboard (Perspective Module)
+Access dashboards via web or mobile devices for real-time monitoring.
 
-![alt text](images/pg_admin_interface.png)
+#### Web Access
+![Dashboard Page 1](./images/pages_02.png)
+![Dashboard Page 2](./images/Dashboard_perspective.png)
 
+#### Mobile Access
+![Mobile Dashboard](./images/iot_dashboard_from_phone.png)
 
+### Ignition Alarms
+Monitor and manage alarms via the Ignition Perspective module.
+![Ignition Alarms](./images/ignitiono_alarm_perspective.png)
 
-### Note
+### Vision Client Launcher
+Launch dashboards and alarms using the Vision Client.
+![Vision Client Demo](./images/gif_vision_client.gif)
 
-MQTT is an Application Layer (Layer 7) protocol designed for lightweight IoT communication, running on top of the OSI model. IoT devices connect to the internet via Wi-Fi, Ethernet, or Cellular (Layer 1-2), obtain an IP address (Layer 3), and establish a TCP connection (Layer 4) with an MQTT broker. The broker manages sessions (Layer 5), while devices exchange structured JSON messages (Layer 6) through MQTT’s publish/subscribe model (Layer 7). Unlike direct IP communication, MQTT enables scalable, reliable, and bandwidth-efficient messaging across firewalls and NAT, making it ideal for IoT applications. 
+---
+
+## Database Management
+Use pgAdmin to query and manage data stored in PostgreSQL.
+![pgAdmin Interface](./images/pg_admin_interface.png)
+
+---
+
+## Technical Notes
+- **MQTT Protocol**: MQTT is an Application Layer (Layer 7) protocol designed for lightweight IoT communication. It operates on top of the OSI model, enabling scalable, reliable, and bandwidth-efficient messaging.
+- **IoT Communication**: Devices connect to the internet via Wi-Fi, Ethernet, or Cellular (Layer 1-2), obtain an IP address (Layer 3), and establish a TCP connection (Layer 4) with an MQTT broker. The broker manages sessions (Layer 5), while devices exchange structured JSON messages (Layer 6) through MQTT’s publish/subscribe model (Layer 7).
+- **Advantages of MQTT**: Unlike direct IP communication, MQTT enables scalable, reliable, and bandwidth-efficient messaging across firewalls and NAT, making it ideal for IoT applications.
+
+---
