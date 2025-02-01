@@ -4,7 +4,7 @@
 This project simulates IoT devices using Docker containers, publishes sensor data via an MQTT broker (Mosquitto), and visualizes it in real-time using Ignition. Data is stored in a PostgreSQL database, with pgAdmin for database management. It provides a complete framework for simulating and processing IoT sensor data. Perfect for testing IoT systems and real-time analytics.
 
 ## Architecture Overview
-![Image Description](./images/architecture.png)
+![Image Description](./images/Archi_2.png)
 
 ## Features
 
