@@ -102,6 +102,6 @@ Use pgAdmin to query and manage data stored in PostgreSQL.
 - **MQTT Protocol**: MQTT is an Application Layer (Layer 7) protocol designed for lightweight IoT communication. It operates on top of the OSI model, enabling scalable, reliable, and bandwidth-efficient messaging.
 - **IoT Communication**: Devices connect to the internet via Wi-Fi, Ethernet, or Cellular (Layer 1-2), obtain an IP address (Layer 3), and establish a TCP connection (Layer 4) with an MQTT broker. The broker manages sessions (Layer 5), while devices exchange structured JSON messages (Layer 6) through MQTT’s publish/subscribe model (Layer 7).
 - **Advantages of MQTT**: Unlike direct IP communication, MQTT enables scalable, reliable, and bandwidth-efficient messaging across firewalls and NAT, making it ideal for IoT applications.
-- **MQTT Engine Module**: Enables Ignition to act as an MQTT client, subscribing to topics and processing real-time data
+- [**MQTT Engine Module**](https://inductiveautomation.com/resources/video/mqtt-engine-module): Enables Ignition to act as an MQTT client, subscribing to topics and processing real-time data
 
 ---
