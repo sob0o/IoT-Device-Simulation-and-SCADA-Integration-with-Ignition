@@ -25,7 +25,7 @@ This project simulates IoT devices using Docker containers, publishes sensor dat
 - Mosquitto (MQTT Broker)
 - Ignition + MQTT Engine Module (.modl)
 - PostgreSQL (DB server)
-- pgAdmin (DB-Interface )
+- pgAdmin (DB-Interface)
 
 ## Overview of Mosquitto Terminal
 ![alt text](images/mosquito_.png)
