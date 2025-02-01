@@ -37,11 +37,16 @@ This project simulates IoT devices using Docker containers, publishes sensor dat
 
 ![alt text](images/interface_tags_designer.png)
 
-## Ignition Dashboard
+## Ignition Dashboard (Perspective Module) :  Acces from the web
 ![alt text](images/pages_02.png) 
 ![alt text](./images/Dashboard_perspective.png)
 ![alt text](images/iot_dashboard_from_phone.png)
 
+### Ignition Alarm (Perspective Module) 
+![alt text](images/ignitiono_alarm_perspective.png)
+
+### Vision Client Launcher : Dashboard and Alarm
+<video controls src="images/Ignition_Vision_Client_Vid.mp4" title=" "></video>
 
 ## PostgreSQL Data from pgAdmin
 
