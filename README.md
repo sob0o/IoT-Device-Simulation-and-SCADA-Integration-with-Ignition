@@ -40,6 +40,7 @@ This project simulates IoT devices using Docker containers, publishes sensor dat
 ## Ignition Dashboard (Perspective Module) :  Acces from the web
 ![alt text](images/pages_02.png) 
 ![alt text](./images/Dashboard_perspective.png)
+### Acces from the phone 
 ![alt text](images/iot_dashboard_from_phone.png)
 
 ### Ignition Alarm (Perspective Module) 
