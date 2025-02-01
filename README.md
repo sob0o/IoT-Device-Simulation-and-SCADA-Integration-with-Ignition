@@ -46,8 +46,7 @@ This project simulates IoT devices using Docker containers, publishes sensor dat
 ![alt text](images/ignitiono_alarm_perspective.png)
 
 ### Vision Client Launcher : Dashboard and Alarm
-<video controls src="images/Ignition_Vision_Client_Vid.mp4" title=" "></video>
-![Demo Video](images/Ignition_Vision_Client_Vid.mp4)
+![alt text](images/gif_vision_client.gif)
 ## PostgreSQL Data from pgAdmin
 
 ![alt text](images/pg_admin_interface.png)
