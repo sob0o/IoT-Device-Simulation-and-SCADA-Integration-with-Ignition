@@ -1,6 +1,6 @@
 # IoT Device Simulation with MQTT, Docker, and Ignition Integration
 
-This project simulates IoT devices using Docker containers, publishes sensor data via an MQTT broker (Mosquitto), and visualizes it in real-time using Ignition. The data is stored in a PostgreSQL database and managed via pgAdmin. It provides a complete framework for simulating, processing, and visualizing IoT sensor data, making it ideal for testing IoT systems and real-time analytics.
+This project simulates IoT devices using Docker containers, publishes sensor data via an MQTT broker (Mosquitto), and visualizes it in real-time using Ignition. Ignition is also utilized for setting up alarms based on real-time data thresholds. The data is stored in a PostgreSQL database and managed via pgAdmin. It provides a complete framework for simulating, processing, and visualizing IoT sensor data, making it ideal for testing IoT systems and real-time analytics.
 
 ---
 
