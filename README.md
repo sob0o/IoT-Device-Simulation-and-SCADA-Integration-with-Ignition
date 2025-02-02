@@ -22,7 +22,7 @@ Aligned with Industry 4.0 principles, the project emphasizes interconnected syst
 ---
 
 ## Architecture Overview
-![Architecture Diagram](./images/Archi_2.png)
+![Architecture Diagram](./images/Archi_3.png)
 
 The system consists of the following components:
 - **IoT Device Simulators**: Docker containers generating sensor data (e.g., temperature, humidity).
